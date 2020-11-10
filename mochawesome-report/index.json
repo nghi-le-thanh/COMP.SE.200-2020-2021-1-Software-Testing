@@ -1,0 +1,102 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-11-10T15:34:37.234Z",
+    "end": "2020-11-10T15:34:37.237Z",
+    "duration": 3,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d35e781d-e343-4e97-ad4c-3c3c7d544cb8",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "46334cff-b6b5-45ac-bae9-c8243761b316",
+          "title": "sum test",
+          "fullFile": "/Users/nghi.thanh/tuni/COMP.SE.200-2020-2021-1-Software-Testing/test/sum.test.js",
+          "file": "/test/sum.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1 + 2 should return 3",
+              "fullTitle": "sum test 1 + 2 should return 3",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(add(1, 2)).to.equal(3);",
+              "err": {},
+              "uuid": "213b5f1a-788e-4ef5-96c0-7722f811bf17",
+              "parentUUID": "46334cff-b6b5-45ac-bae9-c8243761b316",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "213b5f1a-788e-4ef5-96c0-7722f811bf17"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "index",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "reportFilename": "index"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
