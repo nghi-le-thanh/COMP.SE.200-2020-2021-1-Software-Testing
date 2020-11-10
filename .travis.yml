@@ -5,3 +5,10 @@ install:
  - npm i
 script:
  - npm run test
+ deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: abc35c63931c5f096596538ec34798eefe6130f7
+  keep_history: true
+  on:
+    branch: master
