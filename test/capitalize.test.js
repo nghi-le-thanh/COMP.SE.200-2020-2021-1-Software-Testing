@@ -14,4 +14,11 @@ describe('capitalize test', () => {
         expect(result).to.be.a('string');
     });
 
+    it('should not return string for null, boolean, undefined, number', () => {
+        expect(capitalize(null)).to.not.equal('string');
+        expect(capitalize(true)).to.not.equal('string');
+        expect(capitalize(undefined)).to.not.equal('string');
+        expect(capitalize(123)).to.not.equal('string');
+    });
+
 });

@@ -16,4 +16,12 @@ describe('ceil test', () => {
     it('6040 with precision -2 should return 6100', () => {
         expect(ceil(6040, -2)).to.equal(6100);
     });
+
+    it('passing null, undefined, NaN, string should not give results', () => {
+        expect(ceil(null)).to.not.equal('number');
+        expect(ceil(undefined)).to.not.equal('number');
+        expect(ceil(NaN)).to.not.equal('number');
+        expect(ceil('abc')).to.not.equal('number');
+    });
+
 });

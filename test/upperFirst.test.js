@@ -17,5 +17,11 @@ describe('upperFirst test', () => {
         let result = upperFirst('fred');
         expect(result).to.be.a('string');
     });
+    
+    it('should not return string for null, undefined, NaN', () => {       
+        expect(upperFirst(null)).to.not.equal('string');
+        expect(upperFirst(undefined)).to.not.equal('string');
+        expect(upperFirst(NaN)).to.not.equal('string');
+    });
 
 });
