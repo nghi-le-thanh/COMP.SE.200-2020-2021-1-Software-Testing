@@ -2,7 +2,6 @@ import words from '../src/words.js';
 import chai from 'chai';
 
 let expect = chai.expect;
-let assert = chai.assert;
 
 describe('Test word.js function', () => {
 
