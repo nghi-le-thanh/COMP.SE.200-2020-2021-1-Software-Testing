@@ -24,7 +24,7 @@ describe('Test word.js function', () => {
     });
 
     it('Give valid number string to method, return number type and same value', () => {
-        let convertedValue = toNumber(500);
+        const convertedValue = toNumber(500);
         assert.isNumber(convertedValue);
         assert.equal(convertedValue, 500);
     });
