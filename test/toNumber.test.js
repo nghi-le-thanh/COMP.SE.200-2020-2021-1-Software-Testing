@@ -4,7 +4,7 @@ import chai from 'chai';
 const expect = chai.expect;
 const assert = chai.assert;
 
-describe('Test word.js function', () => {
+describe('Test toNumber.js function', () => {
 
     // expected fail test
     it('Give null to method, return NAN', () => {
