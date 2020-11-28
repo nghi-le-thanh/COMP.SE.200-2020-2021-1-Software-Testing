@@ -1,17 +1,7 @@
 language: node_js
 node_js:
- - 12
+ - "stable"
 install:
  - npm i
 script:
  - npm run test
-
-deploy:
-  provider: pages
-  skip-cleanup: true
-  local_dir: travis_report
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  target_branch: master
-  on:
-    branch: master
