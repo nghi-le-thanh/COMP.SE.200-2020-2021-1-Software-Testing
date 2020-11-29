@@ -1,0 +1,22 @@
+{
+    "all": true,
+    "include": [
+        "src/**",
+        "src/.internal"
+    ],
+    "exclude": [
+        "src/.internal",
+        "**/node_modules/**"
+    ],
+    "require": [
+        "@babel/register"
+    ],
+    "reporter": [
+        "lcov",
+        "text",
+        "html",
+        "test-lcov"
+    ],
+    "sourceMap": true,
+    "instrument": true
+}
