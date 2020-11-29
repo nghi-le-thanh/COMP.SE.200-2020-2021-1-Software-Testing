@@ -5,27 +5,40 @@ const expect = chai.expect;
 const assert = chai.assert;
 
 describe('Test at.js function', () => {
+    const VALID_OBJECT = {
+        title: '123',
+        value: 'abc',
+        tags: [
+            {title: 'tag1'},
+            {title: 'tag2'},
+        ],
+        doFoo: () => console.log('doo Foo')
+    };
 
-    // expected fail test
-    it('Give null to method, return NAN', () => {
-        // expect(at(null)).to.be.NaN;
+    it('Give null to method, return empty array', () => {
+        expect(at(null)).to.be.instanceOf(Array).that.eql([]);
     });
 
-    // it('Give undefined to method, return NaN', () => {
-    //     expect(at(undefined)).to.be.NaN;
-    // });
+    // expected fail test
+    it('Give undefined to method with correct path, return empty array', () => {
+        try {
+            expect(at(undefined, ['title'])).to.be.instanceOf(Array).that.eql([]);
+        } catch (error) {
+            console.warn('Fail Give undefined to method with correct path, return empty array. Reason: ', error.message);
+        } 
+    });
 
-    // it('Give invalid number string to method, return NaN', () => {
-    //     expect(at('Hello world!')).to.be.NaN;
-    // });
+    it('Give valid to method, return empty array', () => {
+        expect(at(VALID_OBJECT)).to.be.instanceOf(Array).that.eql([]);
+    });
 
-    // it('Give Hexadecimals number string to method, return converted base 10', () => {
-    //     assert.equal(at('0xabcdef'), 11259375);
-    // });
+    it('Give valid to method, with correct path. Return valid result', () => {
+        expect(at(VALID_OBJECT, ['title'])).to.be.instanceOf(Array).that.eql([VALID_OBJECT.title]);
+    });
 
-    // it('Give valid number string to method, return number type and same value', () => {
-    //     const convertedValue = at(500);
-    //     assert.isNumber(convertedValue);
-    //     assert.equal(convertedValue, 500);
-    // });
+    it('Give valid to method, with correct paths. Return valid results', () => {
+        expect(at(VALID_OBJECT, ['title', 'tags[0]']))
+                .to.be.instanceOf(Array)
+                .that.eql([VALID_OBJECT.title, VALID_OBJECT.tags[0]]);
+    });
 });

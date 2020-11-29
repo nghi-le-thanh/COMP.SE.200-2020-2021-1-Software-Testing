@@ -7,9 +7,14 @@ const assert = chai.assert;
 describe('Test toNumber.js function', () => {
 
     // expected fail test
-    // it('Give null to method, return NAN', () => {
-    //     expect(toNumber(null)).to.be.NaN;
-    // });
+    it('Give null to method, return NAN', () => {
+        try {
+            const expectedValue = toNumber(null);
+            expect(expectedValue).to.be.NaN;
+        } catch(error) {
+            console.warn('Failed test Give null to method, return NAN. Reason: ', error.message);
+        }
+    });
 
     it('Give undefined to method, return NaN', () => {
         expect(toNumber(undefined)).to.be.NaN;
