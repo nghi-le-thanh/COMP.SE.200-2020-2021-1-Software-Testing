@@ -5,10 +5,18 @@ const expect = chai.expect;
 const assert = chai.assert;
 
 describe('Test at.js function', () => {
+    const VALID_OBJECT = {
+        title: '123',
+        value: 'abc',
+        tags: [
+            {title: 'tag1'},
+            {title: 'tag2'},
+        ],
+        doFoo: () => console.log('doo Foo')
+    };
 
-    // expected fail test
     it('Give null to method, return NAN', () => {
-        // expect(at(null)).to.be.NaN;
+        console.log(at(null));
     });
 
     // it('Give undefined to method, return NaN', () => {
