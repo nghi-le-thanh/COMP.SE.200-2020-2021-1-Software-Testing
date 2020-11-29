@@ -6,9 +6,8 @@
   "type": "module",
   "scripts": {
     "test:nocoverage": "./node_modules/.bin/mocha tests/*.test.js --require @babel/polyfill --require @babel/register",
-    "test:coverage": "cross-env NODE_ENV=test nyc --reporter=html --reporter=text ./node_modules/.bin/mocha tests/*.test.js",
+    "test:coverage": "cross-env NODE_ENV=test nyc --reporter=text ./node_modules/.bin/mocha tests/*.test.js",
     "test:awesome": "./node_modules/.bin/mocha --reporter mochawesome --reporter-options reportFilename=index || true",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "print_coverage": "npx nyc report --report-dir ./coverage --temp-dir .nyc_output --reporter=text"
   },
   "author": "",
