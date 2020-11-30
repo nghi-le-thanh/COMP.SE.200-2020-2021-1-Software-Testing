@@ -1,15 +1,15 @@
 {
     "all": true,
     "include": [
-        "src/**",
-        "src/.internal"
+       "src/**"
     ],
     "exclude": [
         "src/.internal",
         "**/node_modules/**"
     ],
     "require": [
-        "@babel/register"
+        "@babel/register",
+        "@babel/polyfill"
     ],
     "reporter": [
         "lcov",
