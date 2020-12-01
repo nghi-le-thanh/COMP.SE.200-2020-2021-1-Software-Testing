@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/nghi-le-thanh/COMP.SE.200-2020-2021-1-Software-Testing/badge.svg?branch=master)](https://coveralls.io/github/nghi-le-thanh/COMP.SE.200-2020-2021-1-Software-Testing?branch=master)
+
 # Student template
 
 ## Purpose of this repository
