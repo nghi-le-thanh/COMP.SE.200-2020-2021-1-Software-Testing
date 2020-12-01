@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/nghi-le-thanh/COMP.SE.200-2020-2021-1-Software-Testing/badge.svg?branch=master)](https://coveralls.io/github/nghi-le-thanh/COMP.SE.200-2020-2021-1-Software-Testing?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/nghi-le-thanh/COMP.SE.200-2020-2021-1-Software-Testing/badge.svg?branch=master)](https://coveralls.io/github/nghi-le-thanh/COMP.SE.200-2020-2021-1-Software-Testing?branch=master) [![Build Status](https://travis-ci.org/nghi-le-thanh/COMP.SE.200-2020-2021-1-Software-Testing.svg?branch=master)](https://travis-ci.org/nghi-le-thanh/COMP.SE.200-2020-2021-1-Software-Testing)
 
 [Mocha Report](https://nghi-le-thanh.github.io/COMP.SE.200-2020-2021-1-Software-Testing/mochawesome-report/)
 [Coverage](https://nghi-le-thanh.github.io/COMP.SE.200-2020-2021-1-Software-Testing/coverage/)
