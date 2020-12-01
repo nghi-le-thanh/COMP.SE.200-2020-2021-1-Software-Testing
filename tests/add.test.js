@@ -10,30 +10,17 @@ describe('add.js test', () => {
 
     // expected fail test
     it('\'1\' + 5 should return 6, number type', () => {
-        try {
-            expect(add('1', 5)).to.equal(6);
-        } catch(error) {
-            console.warn('\'1\' + 5 should return 6, number type. Reason: ', error.message);
-        }
-        
+        expect(add('1', 5)).to.equal(6);
     });
 
     // expected fail test
     it('\'1\' + \'5\' should return 6, number type', () => {
-        try {
-            expect(add('1', '5')).to.equal(6);
-        } catch(error) {
-            console.warn('\'1\' + \'5\' should return 6, number type. Reason: ', error.message);
-        }
+        expect(add('1', '5')).to.equal(6);
     });
 
     // expected fail test
     it('1 + \'5\' should return 6, number type', () => {
-        try {
-            expect(add(1, '5')).to.equal(6);
-        } catch(error) {
-            console.warn('1 + \'5\' should return 6, number type. Reason: ', error.message);
-        }
+        expect(add(1, '5')).to.equal(6);
     });
 
     it('null + 5 should return 5', () => {
@@ -46,11 +33,6 @@ describe('add.js test', () => {
 
     // expected fail test
     it('null + undefined should return', () => {
-        try {
-            expect(add(null, undefined)).to.equal(0);
-        } catch(error) {
-            console.warn('null + undefined should return. Reason: ', error.message);
-        }
-        
+        expect(add(null, undefined)).to.equal(0);
     });
 });

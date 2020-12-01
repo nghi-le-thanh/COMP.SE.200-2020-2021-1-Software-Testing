@@ -8,12 +8,7 @@ describe('Test toNumber.js function', () => {
 
     // expected fail test
     it('Give null to method, return NAN', () => {
-        try {
-            const expectedValue = toNumber(null);
-            expect(expectedValue).to.be.NaN;
-        } catch(error) {
-            console.warn('Failed test Give null to method, return NAN. Reason: ', error.message);
-        }
+        expect(toNumber(null)).to.be.NaN;
     });
 
     it('Give undefined to method, return NaN', () => {
