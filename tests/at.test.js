@@ -21,11 +21,7 @@ describe('Test at.js function', () => {
 
     // expected fail test
     it('Give undefined to method with correct path, return empty array', () => {
-        try {
-            expect(at(undefined, ['title'])).to.be.instanceOf(Array).that.eql([]);
-        } catch (error) {
-            console.warn('Fail Give undefined to method with correct path, return empty array. Reason: ', error.message);
-        } 
+        expect(at(undefined, ['title'])).to.be.instanceOf(Array).that.eql([]);
     });
 
     it('Give valid to method, return empty array', () => {
