@@ -9,10 +9,13 @@ describe('isArrayLike test', () => {
         
         expect(isArrayLike([1, 2, 3])).to.be.true;
         expect(isArrayLike('abc')).to.be.true;
+        expect(isArrayLike([])).to.be.true;
+        
     });
     
     it('should return false if value is not an array-like', () => {
 
+        expect(isArrayLike(23)).to.be.false;
         expect(isArrayLike(Function)).to.be.false;
         expect(isArrayLike(null)).to.be.false;
         expect(isArrayLike(Infinity)).to.be.false;

@@ -8,7 +8,7 @@ describe('isArguments test', () => {
     it('should return true if value is an arguments object', () => {
         
         expect(isArguments(function() { return arguments }())).to.be.true;
-       
+        
     });
     
     it('should return false if value is not an arguments object', () => {

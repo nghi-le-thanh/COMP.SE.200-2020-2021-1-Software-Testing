@@ -7,7 +7,7 @@ describe('isSymbol test', () => {
 
     it('should return true if value is symbol', () => {
         
-        let sym = Symbol('foo');
+        const sym = Symbol('foo');
         expect(isSymbol(Symbol.iterator)).to.be.true;
         expect(isSymbol(sym)).to.be.true;
         expect(isSymbol(Object(sym))).to.be.true;

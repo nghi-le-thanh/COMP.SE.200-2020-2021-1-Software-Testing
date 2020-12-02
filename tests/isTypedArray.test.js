@@ -7,15 +7,15 @@ describe('isTypedArray test', () => {
 
     it('should return true if value is a typed array', () => {
         
-        expect(isTypedArray(new Int8Array)).to.be.true;
-        expect(isTypedArray(new Uint8Array)).to.be.true;
-        expect(isTypedArray(new Uint8ClampedArray)).to.be.true;
-        expect(isTypedArray(new Int16Array)).to.be.true;
-        expect(isTypedArray(new Uint16Array)).to.be.true;
-        expect(isTypedArray(new Int32Array)).to.be.true;
-        expect(isTypedArray(new Uint32Array)).to.be.true;
-        expect(isTypedArray(new BigInt64Array)).to.be.true;
-        expect(isTypedArray(new BigUint64Array)).to.be.true;
+        expect(isTypedArray(Int8Array.from('123'))).to.be.true;
+        expect(isTypedArray(Uint8Array.from('123'))).to.be.true;
+        expect(isTypedArray(Uint8ClampedArray.from('123'))).to.be.true;
+        expect(isTypedArray(Int16Array.from('123'))).to.be.true;
+        expect(isTypedArray(Uint16Array.from('123'))).to.be.true;
+        expect(isTypedArray(Int32Array.from('123'))).to.be.true;
+        expect(isTypedArray(Uint32Array.from('123'))).to.be.true;
+        expect(isTypedArray(BigInt64Array.from('123'))).to.be.true;
+        expect(isTypedArray(BigUint64Array.from('123'))).to.be.true;
     });
     
     it('should return false if value is not a typed array', () => {
