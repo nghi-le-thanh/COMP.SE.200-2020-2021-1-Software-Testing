@@ -15,12 +15,24 @@ describe('Test toNumber.js function', () => {
         expect(toNumber(undefined)).to.be.NaN;
     });
 
+    it('Give an ojbect to method, return NaN', () => {
+        expect(toNumber({a : 'foo'})).to.be.NaN;
+    });
+
     it('Give invalid number string to method, return NaN', () => {
         expect(toNumber('Hello world!')).to.be.NaN;
     });
 
     it('Give Hexadecimals number string to method, return converted base 10', () => {
         assert.equal(toNumber('0xabcdef'), 11259375);
+    });
+
+    it('Give bad Hexadecimals number, return NaN', () => {
+        expect(toNumber('-0xabcdef')).to.be.NaN;
+    });
+
+    it('Give binary number string to method, return converted base 10', () => {
+        assert.equal(toNumber('1010'), 10);
     });
 
     it('Give valid number string to method, return number type and same value', () => {
