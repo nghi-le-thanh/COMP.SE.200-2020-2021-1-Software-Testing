@@ -14,20 +14,12 @@ describe('castArray.js test', () => {
 
     // failed test
     it('cast nothing should return an empty array', () => {
-        try {
-            assert.deepEqual([], castArray());
-        } catch(error) {
-            console.warn('Fail test cast nothing should return an empty array. Reason: ', error.message);
-        }
+        assert.deepEqual([], castArray());
     });
 
     // expected fail test
     it('cast parameters 1, \'a\', 5 should return an array [1, \'a\', 5] ', () => {
-        try {
-            assert.deepEqual(castArray(1, 'a', 5), [1, 'a', 5]);
-        } catch(error) {
-            console.warn('Fail cast parameters 1, \'a\', 5 should return an array [1, \'a\', 5]. Reason: ', error.message);
-        }
+        assert.deepEqual(castArray(1, 'a', 5), [1, 'a', 5]);
     });
 
     it('cast a parameter \'abc\' should return an array [\'abc\'] ', () => {
@@ -40,10 +32,14 @@ describe('castArray.js test', () => {
 
     // expected fail test
     it('cast parameters (3, [2, 3]) should return an array [3, 2, 3]', () => {
-        try {
-            assert.deepEqual(castArray(3, [2, 3]), [3, 2, 3]);
-        } catch (error) {
-            console.warn('Fail test cast parameters (3, [2, 3]) should return an array [3, 2, 3]. Reason: ', error.message);
-        }
+        assert.deepEqual(castArray(3, [2, 3]), [3, 2, 3]);
+    });
+
+    it('cast a single paramter, return an array of that parameter', () => {
+        assert.deepEqual(castArray(1), [1]);
+    });
+
+    it('cast an array, expect return the array', () => {
+        assert.deepEqual(castArray([1, 2, 3]), [1, 2, 3]);
     });
 });
