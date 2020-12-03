@@ -12,10 +12,6 @@ describe('divide.js test', () => {
         assert.strictEqual(divide(10, 5), 2);
     });
 
-    it('divide 10 by 2, expect return 5', () => {
-        assert.strictEqual(divide(10, 5), 2);
-    });
-
     it('divide \'10\' by 2, expect return 5', () => {
         assert.strictEqual(divide('10', 5), 2);
     });
