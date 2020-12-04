@@ -38,11 +38,4 @@ describe('keys.js test', () => {
         }, 'Invalid arguments');
     });
 
-    it('keys undefined, expect thrown error', () => {
-        assert.throws(() => {
-            keys(undefined);
-        }, 'Invalid arguments');
-    });
-
-
 });
